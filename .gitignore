@@ -2,4 +2,7 @@ backend/config/config.env
 
 node_modules
 
-frontend
+frontend/src/actions
+frontend/src/constants
+frontend/src/component
+frontend/src/reducers
