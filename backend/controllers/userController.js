@@ -149,7 +149,7 @@ exports.updatePassword = catchAsyncErrors(async (req, res, next) => {
     if(!isPasswordMatched){
         return next(new ErrorHandler("Old password is not matched", 400))
     }
-
+    
     if(req.body.newPassword === req.body.confirmPassword) {
         return next(new ErrorHandler("Password does not match", 400));
     }
@@ -234,7 +234,7 @@ exports.deleteUser = catchAsyncErrors(async (req, res, next) => {
         return next(new ErrorHandler('User not found', 400));
     }
 
-    await user.deleteOne();
+    await user.deleteOne({_id: req.params.id});
 
     res.status(200).json({
         success: true,
