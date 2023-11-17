@@ -4,5 +4,9 @@ node_modules
 
 frontend/src/actions
 frontend/src/constants
-frontend/src/component
 frontend/src/reducers
+frontend/src/images
+frontend/src/component/Admin
+frontend/src/component/Order
+frontend/src/component/Route
+frontend/src/component/User

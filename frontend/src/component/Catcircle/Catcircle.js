@@ -1,5 +1,5 @@
 import React from 'react';
-import "./Catcircle.css";
+import "./Catcircle.scss";
 
 const catcircles = [
     {

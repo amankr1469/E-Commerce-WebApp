@@ -1,0 +1,88 @@
+.testimonials-slider {
+  text-align: center;
+  flex-wrap: wrap;
+  padding-top: 30px;
+
+  .testimonial {
+    background-color: #f4f4f4;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    gap: 30px 30px;
+    margin: 20px;
+
+    .stars {
+      display: inline;
+    }
+
+    .title {
+      font-weight: bold;
+    }
+
+    .content {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .name {
+      font-weight: bold;
+      font-size: 15px;
+    }
+  }
+
+  .slick-slider {
+    .slick-slide {
+      padding: 0 10px;
+      transition: opacity 0.3s;
+
+      h3 {
+        margin-top: 10px;
+        font-size: 18px;
+      }
+
+      p {
+        margin-top: 5px;
+        font-size: 14px;
+        color: #000000;
+      }
+    }
+  }
+
+  /* Styling for react-slick dots */
+  .slick-dots {
+    li {
+      button:before {
+        color: #666;
+      }
+    }
+    li.slick-active {
+      button:before {
+        color: #007bff;
+      }
+    }
+  }
+}
+@media screen and (max-width: 500px) {
+  .testimonials-slider {
+    .testimonial {
+      padding: 20px;
+      margin: 10px;
+
+      .content {
+        font-size: 10px;
+      }
+
+      .name {
+        font-size: 10px;
+      }
+    }
+    .slick-dots {
+      li {
+        margin-right: -1px;
+      }
+    }
+  }
+}

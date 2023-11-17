@@ -1,5 +1,5 @@
 import React from 'react';
-import "./Subscribe.css";
+import "./Subscribe.scss";
 
 const SectionWithBackground = () => {
     return (
