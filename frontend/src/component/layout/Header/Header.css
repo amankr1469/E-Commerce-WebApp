@@ -1,0 +1,241 @@
+.top__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 35px;
+  background-color: #231918;
+
+  .social__icon {
+    svg {
+      color: white;
+      margin-left: 20px;
+      font-size: 15px;
+      cursor: pointer;
+    }
+  }
+
+  p {
+    color: #ffffff;
+    font-size: 16px;
+  }
+}
+
+nav {
+  background-color: #ffffff;
+  box-shadow: 0 0 20px rgba(17, 17, 17, 0.15);
+  padding: 10px 20px;
+  position: sticky;
+  z-index: 10;
+  top: 0;
+
+  .nav__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+      img {
+        width: 60px;
+      }
+    }
+
+    ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+
+      li {
+        list-style: none;
+
+        a {
+          text-decoration: none;
+          color: black;
+          font-size: 19px;
+        }
+      }
+      @media screen and (max-width: 900px) {
+        display: none;
+      }
+    }
+
+    @media screen and (min-width: 900px) and (max-width: 1100px){
+      ul {
+        gap: 25px;
+  
+        li {
+          a {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+
+    .right {
+      display: flex;
+      gap: 0px 15px;
+
+      svg {
+        color: black;
+        font-size: 25px;
+        cursor: pointer;
+      }
+      @media screen and (max-width: 900px) {
+        display: none;
+      }
+    }
+  }
+
+  .app__navbar-menu-icon {
+    @media screen and (min-width: 900px) {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.app__navbar-menu {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  position: relative;
+  right: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ac3131;
+
+  .mobile {
+    font-weight: 500;
+    gap: 4px;
+  }
+
+  svg {
+    width: 58%;
+    height: 70%;
+    color: #ffffff;
+  }
+
+  div {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 5;
+    padding: 1rem;
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+    background-color: #ffffff;
+    background-size: cover;
+    background-repeat: repeat;
+    box-shadow: 0 0 20px rgba(168, 168, 168, 0.15);
+
+    svg {
+      width: 35px;
+      height: 35px;
+      color: #313bac;
+      margin: 0.5rem 1rem;
+    }
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-direction: column;
+
+      a {
+        margin: 1rem;
+        color: #6b7688;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 1rem;
+
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          color: #313bac;
+        }
+      }
+    }
+
+    @media screen and (min-width: 900px) {
+      display: none;
+    }
+  }
+  @media screen and (min-width: 900px) {
+    display: none;
+  }
+}
+.responsive__menu {
+  display: flex;
+  justify-content: center;
+
+  @media screen and (min-width: 900px) {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .top__nav {
+    display: flex;
+    height: 35px;
+    padding: 0px 1%;
+    background-color: #231918;
+
+    .header-sale {
+      font-size: 11px !important;
+    }
+    .social__icon {
+      svg {
+        color: white;
+        margin-left: 10px !important;
+        font-size: 14px !important;
+        cursor: pointer;
+      }
+    }
+  }
+  nav {
+    .nav__container {
+      .logo {
+        img {
+          padding: 3px;
+          margin-left: -20px;
+          width: 70px;
+        }
+      }
+
+    }
+  }
+  .app__navbar-menu {
+    width: 30px;
+    height: 30px;
+    left: 20px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .top__nav {
+    display: flex;
+    height: 35px;
+    padding: 0px 1%;
+    background-color: #231918;
+  }
+  .app__navbar-menu {
+    width: 30px;
+    height: 30px;
+    left: 20px;
+  }
+}

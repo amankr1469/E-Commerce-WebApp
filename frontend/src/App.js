@@ -4,7 +4,7 @@ import Header from "./component/layout/Header/Header.js";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import WebFont from "webfontloader";
 import React from "react";
-import Footer from "./component/layout/Footer/Footer";
+// import Footer from "./component/layout/Footer/Footer";
 import Home from "./component/Home/Home";
 import ProductDetails from "./component/Product/ProductDetails";
 import Products from "./component/Product/Products";
@@ -39,8 +39,8 @@ import ProcessOrder from "./component/Admin/ProcessOrder";
 import UsersList from "./component/Admin/UsersList";
 import UpdateUser from "./component/Admin/UpdateUser";
 import ProductReviews from "./component/Admin/ProductReviews";
-import Contact from "./component/layout/Contact/Contact";
-import About from "./component/layout/About/About";
+// import Contact from "./component/layout/Contact/Contact";
+// import About from "./component/layout/About/About";
 import NotFound from "./component/layout/Not Found/NotFound";
 
 function App() {
@@ -70,7 +70,7 @@ function App() {
 
   return (
     <Router>
-      <Header />
+      {/* <Header /> */}
 
       {isAuthenticated && <UserOptions user={user} />}
 
@@ -88,9 +88,9 @@ function App() {
 
         <Route exact path="/search" component={Search} />
 
-        <Route exact path="/contact" component={Contact} />
+        {/* <Route exact path="/contact" component={Contact} /> */}
 
-        <Route exact path="/about" component={About} />
+        {/* <Route exact path="/about" component={About} /> */}
 
         <ProtectedRoute exact path="/account" component={Profile} />
 
@@ -186,7 +186,7 @@ function App() {
         />
       </Switch>
 
-      <Footer />
+      {/* <Footer /> */}
     </Router>
   );
 }
