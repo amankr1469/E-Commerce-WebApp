@@ -1,5 +1,5 @@
 import React, { Fragment, useState } from "react";
-import "./Header.css";
+import "./Header.scss";
 import { SpeedDial, SpeedDialAction } from "@material-ui/lab";
 import Backdrop from "@material-ui/core/Backdrop";
 import DashboardIcon from "@material-ui/icons/Dashboard";
@@ -15,7 +15,7 @@ import { useDispatch, useSelector } from "react-redux";
 const UserOptions = ({ user }) => {
   const { cartItems } = useSelector((state) => state.cart);
 
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false); 
   const history = useHistory();
   const alert = useAlert();
   const dispatch = useDispatch();

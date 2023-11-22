@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Stars from "../../images/Star.png";
-import "./Testimonial.scss";
+import "./Testimonial.css";
 import Slider from 'react-slick';
 
 function TestimonialCard() {

@@ -73,6 +73,7 @@ nav {
 
     .right {
       display: flex;
+      // align-items: center;
       gap: 0px 15px;
 
       svg {
@@ -183,6 +184,7 @@ nav {
 .responsive__menu {
   display: flex;
   justify-content: center;
+  // align-items: center;
 
   @media screen and (min-width: 900px) {
     display: none;

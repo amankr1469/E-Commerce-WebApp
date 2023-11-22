@@ -1,6 +1,6 @@
 import React, { Fragment, useEffect, useState } from "react";
 // import { CgMouse } from "react-icons/all";
-import "./Home.scss";
+import "./Home.css";
 import ProductCard from "./ProductCard.js";
 import MetaData from "../layout/MetaData";
 import { clearErrors, getProduct } from "../../actions/productAction";
@@ -104,22 +104,22 @@ const Home = () => {
             All
           </div>
           <div
-            className={`pr-btn ${activeCategory === 'Kurti' ? 'active' : ''}`}
-            onClick={() => handleCategoryClick('Kurti')}
+            className={`pr-btn ${activeCategory === 'Shirt' ? 'active' : ''}`}
+            onClick={() => handleCategoryClick('Shirt')}
           >
-            Kurti
+            Shirt
           </div>
           <div
-            className={`pr-btn ${activeCategory === 'Sharara' ? 'active' : ''}`}
-            onClick={() => handleCategoryClick('Sharara')}
+            className={`pr-btn ${activeCategory === 'Jeans' ? 'active' : ''}`}
+            onClick={() => handleCategoryClick('Jeans')}
           >
-            Sharara
+            Jeans
           </div>
           <div
-            className={`pr-btn ${activeCategory === 'Suit' ? 'active' : ''}`}
-            onClick={() => handleCategoryClick('Suit')}
+            className={`pr-btn ${activeCategory === 'Shoes' ? 'active' : ''}`}
+            onClick={() => handleCategoryClick('Shoes')}
           >
-            Suit
+            Shoes
           </div>
         </div>
         {/* Render your content based on the activeCategory */}
@@ -173,12 +173,12 @@ function renderContentBasedOnCategory(activeCategory) {
 
   if (activeCategory === 'All') {
     return <div>All Products</div>;
-  } else if (activeCategory === 'Kurti') {
-    return <div>Kurti Products</div>;
-  } else if (activeCategory === 'Sharara') {
-    return <div>Sharara Products</div>;
-  } else if (activeCategory === 'Suit') {
-    return <div>Suit Products</div>;
+  } else if (activeCategory === 'Shirt') {
+    return <div>Shirt Products</div>;
+  } else if (activeCategory === 'Jeans') {
+    return <div>Jeans Products</div>;
+  } else if (activeCategory === 'Shoes') {
+    return <div>Shoes Products</div>;
   }
 }
 

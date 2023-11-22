@@ -1,25 +1,25 @@
 import React from 'react';
-import "./Catcircle.scss";
+import "./Catcircle.css";
 
 const catcircles = [
     {
         id: 1,
-        category: 'Kurta',
+        category: 'Men',
         bgimage: require('../../images/image-box1.jpg'),
     },
     {
         id: 2,
-        category: 'Shrugs',
+        category: 'Women',
         bgimage: require('../../images/image-box2.jpg'),
     },
     {
         id: 3,
-        category: 'Bottoms',
+        category: 'Children',
         bgimage: require('../../images/image-box3.jpg'),
     },
     {
         id: 4,
-        category: 'Sets',
+        category: 'Exclusive',
         bgimage: require('../../images/image-box4.jpg'),
     },
     // Add more products as needed

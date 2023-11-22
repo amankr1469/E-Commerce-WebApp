@@ -1,4 +1,4 @@
-import "./App.css";
+import "./App.css"; 
 import { useEffect, useState } from "react";
 import Header from "./component/layout/Header/Header.js";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
@@ -70,7 +70,7 @@ function App() {
 
   return (
     <Router>
-      {/* <Header /> */}
+      <Header />
 
       {isAuthenticated && <UserOptions user={user} />}
 

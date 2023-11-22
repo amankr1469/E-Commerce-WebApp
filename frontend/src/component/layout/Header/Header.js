@@ -7,20 +7,14 @@ import {
 } from "react-icons/ai";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate, useHistory } from 'react-router-dom';
-// import { motion } from "framer-motion";
 import { HiMenuAlt4, HiX } from "react-icons/hi";
 import Logo from "../../../images/logo.png"
-// import Cart from '../Cart/Cart';
-import "./Header.css";
+import "./Header.scss";
 import { BsFacebook, BsInstagram, BsWhatsapp, BsTwitter } from "react-icons/bs";
-// import { setCartOpen } from "../../Redux/slices/appConfigSlice";
-// import { setWishOpen } from "../../Redux/slices/appConfigSlice";
 
 const Header = () => {
     const dispatch = useDispatch();
     const [toggle, setToggle] = useState(false);
-    const { isCartOpen } = useSelector((state) => state.app); const { isWishOpen } = useSelector((state) => state.app);
-    const { carts } = useSelector((state) => state.products);
     const history = useHistory();
 
     const openWishDialog = () => {
@@ -30,9 +24,16 @@ const Header = () => {
     const openCartDialog = () => {
         // dispatch(setCartOpen(true));
     };
-    
 
-    function open() {
+    function openSearch() {
+        history.push('/search');
+    }
+
+    function openCart() {
+        history.push('/cart');
+    }
+
+    function openProfile() {
       history.push('/login');
     }
 
@@ -70,7 +71,7 @@ const Header = () => {
 
                 </div>
                 <p className="header-sale">
-                    Use RAKHI50 for FLAT 50% OFF
+                    LEVEL-UP YOUR GAME
                 </p>
             </div>
             <nav className="navbar-items nav-contain">
@@ -82,39 +83,34 @@ const Header = () => {
 
                         <Link to={`/`}>Home</Link>
                         <Link to={`/about`}>About us</Link>
-                        <Link to={`/ethnicwear`}>Ethnic Wear</Link>
-                        <Link to={`/shopnow`}>Shop Now</Link>
+                        <Link to={`/products`}>Show Now</Link>
                         <Link to={`/storelocator`}>Store Locator</Link>
                         <Link to={`/contactus`}>Reach Us</Link>
 
                     </ul>
                     <div className="right">
-                        <AiOutlineSearch />
-                        <AiOutlineHeart onClick={openWishDialog} />
-                        {/* <Link to={`/login`}> */}
-                            <AiOutlineUser onClick={open}/>
-                        {/* </Link> */}
-                        <AiOutlineShopping onClick={openCartDialog} />
+                        <AiOutlineSearch onClick={openSearch}/>
+                        <AiOutlineHeart />
+                        <AiOutlineUser onClick={openProfile}/>
+                        <AiOutlineShopping onClick={openCart} />
                     </div>
                 </div>
 
                 <div className="responsive__menu">
                     <AiOutlineSearch
                         size={25}
-                        style={{ marginRight: "10px" }} />
+                        style={{ marginRight: "10px" }}
+                        onClick={openSearch} />
                     <AiOutlineHeart
                         size={25}
                         style={{ marginRight: "10px" }}
-                        onClick={openWishDialog}
                     />
                     <AiOutlineShopping
                         size={25}
                         style={{ marginRight: "10px" }}
-                        onClick={openCartDialog}
+                        onClick={openCart}
                     />
-                    {/* <Link to={`/login`}> */}
-                        <AiOutlineUser size={25} onClick={open}/>
-                    {/* </Link> */}
+                        <AiOutlineUser size={25} onClick={openProfile}/>
                     <div className="app__navbar-menu">
                         <HiMenuAlt4 onClick={() => setToggle(true)} />
                         {toggle && (
@@ -126,8 +122,7 @@ const Header = () => {
                                 <ul className='mobile'>
                                     <Link to={`/`}>Home</Link>
                                     <Link to={`/about`}>About us</Link>
-                                    <Link to={`/ethnicwear`}>Ethnic Wear</Link>
-                                    <Link to={`/shopnow`}>Shop Now</Link>
+                                    <Link to={`/products`}>Shop Now</Link>
                                     <Link to={`/storelocator`}>Store Locator</Link>
                                     <Link to={`/contactus`}>Reach Us</Link>
                                 </ul>
