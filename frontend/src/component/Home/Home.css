@@ -28,7 +28,7 @@
   flex-wrap: wrap;
   gap: 20px;
   justify-content: space-between;
-  margin: 20px 0;
+  margin: 20px;
 }
 .homePage .home-gallery .upper-gallery .gallery-card1,
 .homePage .home-gallery .upper-gallery .gallery-card2,
