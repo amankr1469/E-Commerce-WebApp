@@ -44,7 +44,7 @@ const products = [
     },
 ];
 
-export default function Cards() {
+function Cards() {
     const settings = {
         dots: true,
         infinite: true,
@@ -76,3 +76,5 @@ export default function Cards() {
         </div>
     )
 }
+
+export default Cards;

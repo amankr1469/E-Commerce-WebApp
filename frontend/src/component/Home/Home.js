@@ -36,7 +36,7 @@ const Home = () => {
       {/* Choosing Elini! */}
       <section className='ch-elini contain contain-bg'>
         <h2 className='sec-head sec-head-ul'>
-          Choosing Elini!
+          Laxmi Cheet Fund
         </h2>
         <p className='sec-para'>
           Elini is a luxury brand which was born in the India, a land symbolizing opulence and exceptional
@@ -91,7 +91,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className='contain contain-bg product-wrapper'>
+      {/* <section className='contain contain-bg product-wrapper'>
         <div className='pr-wrapper-header'>
           <h2 className='sec-head'>Popular Styles</h2>
           <p className='sec-para'>View all</p>
@@ -122,10 +122,8 @@ const Home = () => {
             Shoes
           </div>
         </div>
-        {/* Render your content based on the activeCategory */}
         {renderContentBasedOnCategory(activeCategory)}
-        {/* <ProductCardPrice /> */}
-      </section >
+      </section > */}
 
       {/* Product Slider  */}
       <section className="product-slider contain  contain-bg">
