@@ -1,12 +1,4 @@
-import React, { Fragment, useEffect, useState } from "react";
-// import { CgMouse } from "react-icons/all";
 import "./Home.css";
-import ProductCard from "./ProductCard.js";
-import MetaData from "../layout/MetaData";
-import { clearErrors, getProduct } from "../../actions/productAction";
-import { useSelector, useDispatch } from "react-redux";
-import Loader from "../layout/Loader/Loader";
-import { useAlert } from "react-alert";
 import img1 from "../../images/img1.jpg";
 import img2 from "../../images/img2.jpg";
 import img3 from "../../images/img3.jpg";
@@ -14,7 +6,6 @@ import img4 from "../../images/img4.jpg";
 import Cards from "../../component/Cards/Cards.js";
 import Subscribe from "../../component/Subscribe/Subscribe.js";
 import Catcircle from '../../component/Catcircle/Catcircle.js';
-// import ProductCardPrice from '../../component/ProductCardPrice/ProductCardPrice.js';
 import v1 from "../../images/img1.jpg";
 import v2 from "../../images/img1.jpg";
 import v3 from "../../images/img1.jpg";
@@ -22,28 +13,24 @@ import v4 from "../../images/img1.jpg";
 import TestimonialCard from "../../component/TestimonialCard/Testimonial.js";
 
 const Home = () => {
-  const [activeCategory, setActiveCategory] = useState('All'); // Initialize with 'All' as the default category
 
-  const handleCategoryClick = (category) => {
-    setActiveCategory(category);
-  };
   return (
     <div className='homePage'>
       <section className='dress-cat contain'>
         <Catcircle />
       </section>
 
-      {/* Choosing Elini! */}
       <section className='ch-elini contain contain-bg'>
         <h2 className='sec-head sec-head-ul'>
           Laxmi Cheet Fund
         </h2>
         <p className='sec-para'>
-          Elini is a luxury brand which was born in the India, a land symbolizing opulence and exceptional
-          class. We produce fashion items using original craftsmanship, vibrant prints, and out-of-the-
-          ordinary meticulousness. The label was founded by Lila Achimu and is driven by her love and
-          passion for both Japanese and Oriental art and culture. Kimaya introduces to the market an array
-          of unique designs, for the elegant woman seeking the extraordinary!
+        From streetwear staples to chic statement pieces, 
+        our curated collection celebrates diversity,
+        inclusivity, and self-expression. 
+        Embrace your unique style with our sustainable, 
+        high-quality garments designed to empower and inspire the next generation of fashion enthusiasts. 
+        Join the movement and redefine fashion with Laxmi Cheet Fund.
         </p>
       </section>
 
@@ -91,40 +78,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* <section className='contain contain-bg product-wrapper'>
-        <div className='pr-wrapper-header'>
-          <h2 className='sec-head'>Popular Styles</h2>
-          <p className='sec-para'>View all</p>
-        </div>
-        <div className='pr-wrapper-btnbox'>
-          <div
-            className={`pr-btn ${activeCategory === 'All' ? 'active' : ''}`}
-            onClick={() => handleCategoryClick('All')}
-          >
-            All
-          </div>
-          <div
-            className={`pr-btn ${activeCategory === 'Shirt' ? 'active' : ''}`}
-            onClick={() => handleCategoryClick('Shirt')}
-          >
-            Shirt
-          </div>
-          <div
-            className={`pr-btn ${activeCategory === 'Jeans' ? 'active' : ''}`}
-            onClick={() => handleCategoryClick('Jeans')}
-          >
-            Jeans
-          </div>
-          <div
-            className={`pr-btn ${activeCategory === 'Shoes' ? 'active' : ''}`}
-            onClick={() => handleCategoryClick('Shoes')}
-          >
-            Shoes
-          </div>
-        </div>
-        {renderContentBasedOnCategory(activeCategory)}
-      </section > */}
-
       {/* Product Slider  */}
       <section className="product-slider contain  contain-bg">
         <div className="slider-heading">
@@ -164,21 +117,6 @@ const Home = () => {
     </div >
   );
 };
-
-function renderContentBasedOnCategory(activeCategory) {
-  // Implement your logic to filter and display content based on the active category.
-  // You can conditionally render different components or items here.
-
-  if (activeCategory === 'All') {
-    return <div>All Products</div>;
-  } else if (activeCategory === 'Shirt') {
-    return <div>Shirt Products</div>;
-  } else if (activeCategory === 'Jeans') {
-    return <div>Jeans Products</div>;
-  } else if (activeCategory === 'Shoes') {
-    return <div>Shoes Products</div>;
-  }
-}
 
 
 export default Home;

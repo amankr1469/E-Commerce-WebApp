@@ -5,7 +5,7 @@ const catcircles = [
     {
         id: 1,
         category: 'Men',
-        bgimage: require('../../images/image-box1.jpg'),
+        bgimage: require('../../images/image-box3.jpg'),
     },
     {
         id: 2,
@@ -15,7 +15,7 @@ const catcircles = [
     {
         id: 3,
         category: 'Children',
-        bgimage: require('../../images/image-box3.jpg'),
+        bgimage: require('../../images/image-box1.jpg'),
     },
     {
         id: 4,
