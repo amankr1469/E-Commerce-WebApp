@@ -1,28 +1,31 @@
 import React from 'react';
 import "./Catcircle.css";
+import men from '../../images/image-box3.jpg';
+import women from '../../images/image-box2.jpg';
+import children from '../../images/image-box1.jpg';
+import exclusive from '../../images/image-box4.jpg';
 
 const catcircles = [
     {
         id: 1,
         category: 'Men',
-        bgimage: require('../../images/image-box3.jpg'),
+        bgimage: men,
     },
     {
         id: 2,
         category: 'Women',
-        bgimage: require('../../images/image-box2.jpg'),
+        bgimage: women,
     },
     {
         id: 3,
         category: 'Children',
-        bgimage: require('../../images/image-box1.jpg'),
+        bgimage: children,
     },
     {
         id: 4,
         category: 'Exclusive',
-        bgimage: require('../../images/image-box4.jpg'),
+        bgimage: exclusive,
     },
-    // Add more products as needed
 ];
 
 export default function Catcircle() {

@@ -3,44 +3,49 @@ import "./Cards.css";
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-// import { faBorderNone } from '@fortawesome/free-solid-svg-icons';
+import img1 from '../../images/image-box1.jpg';
+import img2 from '../../images/image-box2.jpg';
+import img3 from '../../images/image-box3.jpg';
+import img4 from '../../images/image-box4.jpg';
+import img5 from '../../images/image-box5.jpg';
+import img6 from '../../images/image-box6.jpg';
 
 const products = [
     {
         id: 1,
         name: 'Product 1',
-        description: 'Shop Now',
-        image: require('../../images/image-box1.jpg'),
+        description: 'Aesthetics',
+        image: img1,
     },
     {
         id: 2,
         name: 'Product 2',
-        description: 'Shop Now',
-        image: require('../../images/image-box2.jpg'),
+        description: 'Glamour',
+        image: img2,
     },
     {
         id: 3,
         name: 'Product 3',
-        description: 'Shop Now',
-        image: require('../../images/image-box3.jpg'),
+        description: 'Ravishing',
+        image: img3,
     },
     {
         id: 4,
         name: 'Product 4',
-        description: 'Shop Now',
-        image: require('../../images/image-box4.jpg'),
+        description: 'Ethical',
+        image: img4,
     },
     {
         id: 5,
         name: 'Product 5',
-        description: 'Shop Now',
-        image: require('../../images/image-box5.jpg'),
+        description: 'Saree',
+        image: img5,
     },
     {
         id: 6,
         name: 'Product 6',
-        description: 'Shop Now',
-        image: require('../../images/image-box6.jpg'),
+        description: 'Whatever',
+        image: img6,
     },
 ];
 
