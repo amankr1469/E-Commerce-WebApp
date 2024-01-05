@@ -5,15 +5,11 @@ import Slider from 'react-slick';
 
 function TestimonialCard() {
   const testimonials = [
-    { name: 'Carla Finch', content: 'I purchased a Long Sleeve Kimono out of my love of Japanese culture and it turned out really amazing.The delivery and tracking were also seamless.Absolutely love Elini! ', title: 'Vibrant Collection' },
-    { name: 'Zahra Amin', content: 'My sister suggested Elini to me for my birthday outfit. Opted for one of their trendy jumpsuits and was not disappointed. 10 out of 10 - highly recommended.', title: 'Vibrant Collection' },
-    { name: 'Carla Finch', content: 'I purchased a Long Sleeve Kimono out of my love of Japanese culture and it turned out really amazing.The delivery and tracking were also seamless.Absolutely love Elini! ', title: 'Vibrant Collection' },
-    { name: 'Zahra Amin', content: 'My sister suggested Elini to me for my birthday outfit. Opted for one of their trendy jumpsuits and was not disappointed. 10 out of 10 - highly recommended.', title: 'Vibrant Collection' },
-    { name: 'Carla Finch', content: 'I purchased a Long Sleeve Kimono out of my love of Japanese culture and it turned out really amazing.The delivery and tracking were also seamless.Absolutely love Elini! ', title: 'Vibrant Collection' },
-    { name: 'Zahra Amin', content: 'My sister suggested Elini to me for my birthday outfit. Opted for one of their trendy jumpsuits and was not disappointed. 10 out of 10 - highly recommended.', title: 'Vibrant Collection' },
-    { name: 'Carla Finch', content: 'I purchased a Long Sleeve Kimono out of my love of Japanese culture and it turned out really amazing.The delivery and tracking were also seamless.Absolutely love Elini! ', title: 'Vibrant Collection' },
-    { name: 'Zahra Amin', content: 'My sister suggested Elini to me for my birthday outfit. Opted for one of their trendy jumpsuits and was not disappointed. 10 out of 10 - highly recommended.', title: 'Vibrant Collection' },
-    // Add more testimonials
+    { name: 'Aristotle', content: 'I purchased a Long Sleeve Kimono out of my love of Japanese culture.' },
+    { name: 'Karl Marx', content: '10 out of 10 - highly recommended. Must Buy' },
+    { name: 'Friedrich Nietzsche', content: 'The delivery and tracking were also seamless.' },
+    { name: 'René Descartes', content: 'Opted for one of their trendy jumpsuits and was not disappointed.' },
+    { name: 'Socrates', content: 'Absolutely love LCF!10 out of 10 - highly recommended. ' },
   ];
   const [slidesToShow, setSlidesToShow] = useState();
 
@@ -49,15 +45,14 @@ function TestimonialCard() {
 
 
   return (
-    <div className="testimonials-slider contain">
+    <div className="testimonials-slider">
       <h2 className="sec-head">Customer's Love</h2>
       <Slider {...settings}>
         {testimonials.map((testimonial, index) => (
-          <div key={index} className="testimonial">
+          <div key={index} id="testimonial">
             <img className="stars" src={Stars} alt="RatingStart" />
-            <h3 className="title">{testimonial.title}</h3>
+            <h3 className="name">{testimonial.name}</h3>
             <p className="content">{testimonial.content}</p>
-            <p className="name">{testimonial.name}</p>
           </div>
         ))}
       </Slider>

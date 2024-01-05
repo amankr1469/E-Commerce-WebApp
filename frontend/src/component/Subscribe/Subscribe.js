@@ -6,7 +6,7 @@ const SectionWithBackground = () => {
         <section className="section-with-background">
             <div className="background-image" />
             <div className="content">
-                <h2 className="heading">Subscribe to Elini newsletter</h2>
+                <h2 className="heading">Subscribe to LCF newsletter</h2>
                 <p className="description">Keep in touch with us by subscribing to our newsletter to stay updated on upcoming sales,
                     special discounts and limited edition launches.</p>
                 <div className="email-input">

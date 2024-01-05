@@ -6,10 +6,10 @@ import img4 from "../../images/img4.jpg";
 import Cards from "../../component/Cards/Cards.js";
 import Subscribe from "../../component/Subscribe/Subscribe.js";
 import Catcircle from '../../component/Catcircle/Catcircle.js';
-import v1 from "../../images/img1.jpg";
-import v2 from "../../images/img1.jpg";
-import v3 from "../../images/img1.jpg";
-import v4 from "../../images/img1.jpg";
+import v1 from "../../images/free.png";
+import v2 from "../../images/ontime.png";
+import v3 from "../../images/secure.png";
+import v4 from "../../images/online-support.png";
 import TestimonialCard from "../../component/TestimonialCard/Testimonial.js";
 
 const Home = () => {
