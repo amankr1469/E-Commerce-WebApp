@@ -5,40 +5,63 @@ const ApiFeatures = require('../utils/apiFeatures');
 const cloudinary = require('cloudinary');
 
 //Create a new Product -- Admin 
+// exports.createProduct = catchAsyncErrors(async (req, res, next) => {
+//   let images = [];
+
+//   if (typeof req.body.images === "string") {
+//     images.push(req.body.images);
+//   } else {
+//     images = req.body.images;
+//   }
+
+//   const imagesLinks = [];
+
+//   for (let i = 0; i < images.length; i++) {
+//     const result = await cloudinary.v2.uploader.upload(images[i], {
+//       folder: "products",
+//     });
+
+//     imagesLinks.push({
+//       public_id: result.public_id,
+//       url: result.secure_url,
+//     });
+//   }
+
+//   req.body.images = imagesLinks;
+//   req.body.user = req.user.id;
+
+//   const product = await Product.create(req.body);
+
+//   res.status(201).json({
+//     success: true,
+//     product,
+//   });
+// });
+
 exports.createProduct = catchAsyncErrors(async (req, res, next) => {
-    let images = [];
+  let image = req.body.images; // Assuming the image is sent as 'image' in the request body
+  console.log(req.body);
+  const result = await cloudinary.v2.uploader.upload(image, {
+    folder: "products",
+    width: 150,
+    crop: "scale",
+  });
 
-    if (typeof req.body.images === "string") {
-      images.push(req.body.images);
-    } else {
-      images = req.body.images;
-    }
-  
-    const imagesLinks = [];
-  
-    for (let i = 0; i < images.length; i++) {
-      const result = await cloudinary.v2.uploader.upload(images[i], {
-        folder: "products",
-      });
-  
-      imagesLinks.push({
-        public_id: result.public_id,
-        url: result.secure_url,
-      });
-    }
-  
-    req.body.images = imagesLinks;
-    req.body.user = req.user.id;
+  req.body.image = {
+    public_id: result.public_id,
+    url: result.secure_url,
+  };
+  req.body.user = req.user.id;
 
-    //Assigning the UserID to the product who created it
-    req.body.user = req.user.id;
+  const product = await Product.create(req.body);
 
-    const product = await Product.create(req.body);
-    res.status(201).json({
-        success: true,
-        product
-    })
+  res.status(201).json({
+    success: true,
+    product,
+  });
 });
+
+
 
 //Get all products
 exports.getAllProducts = catchAsyncErrors(async (req, res, next) => {
