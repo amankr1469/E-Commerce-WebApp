@@ -34,10 +34,10 @@ const Home = () => {
           <MetaData title="ECOMMERCE" />
           <div className='homePage'>
 
-<section className='ch-elini contain contain-bg'>
-  <h2 className='sec-head sec-head-ul'>
-    Laxmi Cheet Fund
-  </h2>
+<section className='ch contain contain-bg'>
+<button>
+  <span>LCF</span>
+</button>
   <p className='sec-para'>
   From streetwear staples to chic statement pieces, 
   our curated collection celebrates diversity,
