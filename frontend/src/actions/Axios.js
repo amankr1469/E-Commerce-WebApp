@@ -5,7 +5,7 @@ const createAxiosInstance = () => {
     const token = localStorage.getItem('token');
 
     const API = axios.create({
-        baseURL: 'http://localhost:4000'
+        baseURL: 'https://e-commerce-server-6idr.onrender.com'
     });
 
     if (token) {
